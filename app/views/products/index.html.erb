@@ -11,9 +11,9 @@
         <p><%= product.description %></p>
         <p><%= product.price %></p>
         <p><strong><%= product.colour %></strong></p>
-        <button><%= link_to 'Show', product %></button>
-        <button><%= link_to 'Edit', edit_product_path(product) %></button>
-        <button><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        <%= link_to 'Show', product %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     <% end %>
   </div>
