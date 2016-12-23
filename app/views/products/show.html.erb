@@ -37,7 +37,9 @@
     <div class="col-xs-12 col-md-6">
       <h4><span class="glyphicon glyphicon-star"></span> Comments <span class="glyphicon glyphicon-star"></h4>
       <div>
-         <%= render partial: "comments" %>
+        <%= will_paginate @comments %>
+        <%= render partial: "comments" %>
+        <%= will_paginate @comments %>
       </div>
     </div>
   </div>
