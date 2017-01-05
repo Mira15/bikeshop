@@ -62,3 +62,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'will_paginate', '~> 3.1.1'
+# this gem is used to handle payments online
+gem 'stripe'
