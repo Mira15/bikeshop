@@ -3,8 +3,8 @@ require 'rails_helper'
 describe Order do
 
   before do
-    @product = Product.create!(name: "race bike")
-    @user = User.create!(email: "me@example.com", password: "passwort")
+    @product = FactoryGirl.build(:product)
+    @user = FactoryGirl.build(:user)
   end
 
   it "is valid" do

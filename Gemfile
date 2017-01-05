@@ -37,6 +37,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   # this gem is used for functional testing the controller
   gem 'rails-controller-testing'
+  # this gem is for generating test data instead of the default fixtures
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
