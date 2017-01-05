@@ -33,8 +33,10 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  # rspec-rails is a testing framework for Rails
+  # rspec-rails is a testing framework for Rails, used for testing the models
   gem 'rspec-rails', '~> 3.5'
+  # this gem is used for functional testing the controller
+  gem 'rails-controller-testing'
 end
 
 group :development do
