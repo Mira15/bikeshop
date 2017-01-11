@@ -23,7 +23,7 @@
       <% end %>
     </div>
     <div class="col-xs-12 col-md-6">
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
+      <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
     </div>
   </div>
 
