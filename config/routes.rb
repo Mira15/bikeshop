@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   post 'payments/create'
 
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
@@ -20,6 +21,9 @@ Rails.application.routes.draw do
   get '/caroussel', to: 'static_pages#landing_page'
 
   root 'static_pages#index'
+
+  # ActionCable
+  mount ActionCable.server => '/cable'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

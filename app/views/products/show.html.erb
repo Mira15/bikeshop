@@ -42,6 +42,8 @@
     </div>
     <div class="col-xs-12 col-md-6">
       <h4><span class="glyphicon glyphicon-star"></span> Comments <span class="glyphicon glyphicon-star"></span></h4>
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!
+      </div>
       <div>
         <%= will_paginate @comments %>
         <%= render partial: "comments" %>
