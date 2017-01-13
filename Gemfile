@@ -64,3 +64,5 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.1.1'
 # this gem is used to handle payments online
 gem 'stripe'
+# this gem is an in-memory data structure store, used as a database, cache and message broker
+gem 'redis-rails'
