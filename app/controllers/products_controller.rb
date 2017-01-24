@@ -1,8 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-  # GET /products
-  # GET /products.json
+  # GET request, renders all products and condition for search box
   def index
     if params[:q]
       search_term = params[:q]
@@ -16,23 +15,21 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1
-  # GET /products/1.json
+  # GET request, renders one product with comments and pagination
   def show  
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end  
 
-  # GET /products/new
+  # GET request, renders form for entering details for a new product
   def new
     @product = Product.new
   end
 
-  # GET /products/1/edit
+  # GET request, renders form for editing existing product
   def edit
   end
 
-  # POST /products
-  # POST /products.json
+  # POST request, new product is saved in the database
   def create
     @product = Product.new(product_params)
 
@@ -47,8 +44,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /products/1
-  # PATCH/PUT /products/1.json
+  # PATCH/PUT request, product is updated in the database
   def update
     respond_to do |format|
       if @product.update(product_params)
@@ -61,8 +57,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.json
+  # DELETE request, product is destroyed from the database
   def destroy
     @product.destroy
     respond_to do |format|
